@@ -1,0 +1,72 @@
+{
+  "name": "is-this-job-toxic",
+  "version": "0.1.0",
+  "description": "Paste a job posting and see its red flags decoded into what they actually mean — 'we're a family' → unpaid overtime, 'fast-paced' → understaffed, 'competitive salary' → we won't say the number. Scored 0–100, 100% local, rule-based, nothing uploaded.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "is-this-job-toxic": "./dist/cli.js",
+    "redflags": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:web": "vite build",
+    "dev": "vite",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "example": "node dist/cli.js examples/toxic.txt",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "job",
+    "job-search",
+    "job-posting",
+    "red-flags",
+    "toxic",
+    "hiring",
+    "recruiting",
+    "career",
+    "corporate-speak",
+    "we-are-a-family",
+    "no-api-key",
+    "cli"
+  ],
+  "author": "didrod205 (https://github.com/didrod205)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didrod205/is-this-job-toxic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/didrod205/is-this-job-toxic/issues"
+  },
+  "homepage": "https://github.com/didrod205/is-this-job-toxic#readme",
+  "dependencies": {
+    "cac": "^6.7.14",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.8"
+  }
+}

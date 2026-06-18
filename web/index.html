@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>is this job toxic? — decode a job posting's red flags</title>
+    <meta
+      name="description"
+      content="Paste a job posting and see its red flags decoded into what they actually mean: 'we're a family' → unpaid overtime, 'fast-paced' → understaffed, 'competitive salary' → we won't say the number. Scored 0–100, 100% in your browser. No AI, nothing uploaded."
+    />
+    <meta property="og:title" content="is this job toxic? 🚩" />
+    <meta property="og:description" content="Decode a job posting's red flags into what they really mean — with zero AI. 100% local, nothing uploaded." />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>is this job toxic? 🚩</h1>
+      <p class="tagline">Paste a job posting. We decode the red flags into <strong>what they actually mean.</strong></p>
+      <p class="privacy">🔒 100% in your browser. Rule-based, no AI, nothing uploaded.</p>
+    </header>
+
+    <main>
+      <section class="input-card">
+        <div class="toolbar">
+          <button id="sample-toxic" type="button" class="ghost">Load a toxic posting</button>
+          <button id="sample-fair" type="button" class="ghost">Load a fair posting</button>
+          <button id="clear" type="button" class="ghost">Clear</button>
+        </div>
+        <textarea id="input" spellcheck="false" placeholder="Paste a job description — the “About the role”, the “Who you are”, the perks…"></textarea>
+      </section>
+
+      <section id="result" class="result hidden">
+        <div class="scorecard">
+          <div class="gauge"><div id="score" class="score">0</div><div class="of">/100</div></div>
+          <div class="verdict">
+            <div id="label" class="label">Looks healthy</div>
+            <div id="sub" class="sub"></div>
+          </div>
+        </div>
+
+        <h3 class="section-title" id="decoder-title">What they said <span class="dim">→ what it really means</span></h3>
+        <div id="decoder" class="decoder"></div>
+
+        <details class="raw">
+          <summary>Show the posting with flags highlighted</summary>
+          <div id="highlighted" class="highlighted"></div>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Powered by <a href="https://www.npmjs.com/package/is-this-job-toxic"><code>is-this-job-toxic</code></a> —
+        the same engine in a CLI: <code>npx is-this-job-toxic posting.txt</code>.
+        <a href="https://github.com/didrod205/is-this-job-toxic">GitHub</a> · MIT
+      </p>
+      <p class="dim">Red flags are <em>signals</em>, not proof. A great company can write a clumsy posting — and a toxic one can hire a good copywriter. Use your judgment in the interview too.</p>
+    </footer>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

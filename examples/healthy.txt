@@ -1,0 +1,14 @@
+Senior Backend Engineer (Remote, EU timezones)
+
+Salary: €75,000–€95,000 depending on level, reviewed every year. We publish the band
+because we think you deserve to know before you apply.
+
+The role: you'll own our billing service — designing APIs, writing Go, and improving
+our test coverage. A typical week is focused work with two short standups. We protect
+deep-work time and do not expect evening or weekend availability.
+
+What we offer: 30 days of paid vacation (and we track that managers actually take it),
+a €1,500 yearly learning budget, and a four-day onboarding plan with a named mentor.
+
+Interview process: a 45-minute intro, one take-home (paid, capped at 3 hours), and a
+technical conversation. We give feedback at every stage.
